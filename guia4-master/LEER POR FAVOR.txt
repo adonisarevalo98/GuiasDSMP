@@ -1,0 +1,11 @@
+ 
+
+
+
+*********************************************************************
+
+- Los dos ejercicios estan modificados y validados tal y como
+  se pide en la discucion de resultados.
+
+
+*********************************************************************

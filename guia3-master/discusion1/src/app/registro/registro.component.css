@@ -1,0 +1,56 @@
+button {
+    background-color: #e67300; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+    input,select {
+    
+    padding: 12px 20px;
+    
+    
+    font-size: 2vw;
+    }
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+         -webkit-text-stroke: 1px black;
+  
+    }
+    label{
+    font-size: 2vw;
+    }
+    #IL{
+        width: 75%;
+        margin-left: 35%;
+        margin-right: 15%;
+        box-sizing: border-box;
+    }
+    .header {
+    padding: 10px;
+    text-align: center;
+    background: #cc6600;
+    color: white;
+    font-size: 30px;
+    }
+    table{
+        margin-top: 2%;
+        width: 100%;
+    }
+    thead{
+  background-color: #4d2600; /* Green */
+    color: white;
+    font-size: 20px;
+    }
+     #nom{
+        font-size: 16px;
+        width: 40%;
+    }
+     #nm{
+        font-size: 16px;
+        width: 10%;
+    }
+     

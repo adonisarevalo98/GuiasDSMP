@@ -1,0 +1,67 @@
+<style>
+    .btn-space{
+     margin-right: 20px;
+    }
+    </style>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+    Primer CRUD Angular
+    </a>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mt-4">
+    <ul class="list-group ">
+        <li *ngFor="let alumno of alumnoArray" class="list-group-item list-group-item-
+        action" (click)="openForEdit(alumno)" [class.active]="alumno == selectedAlumno " >
+        <span class="badge badge-dark">{{alumno.id}}</span>
+        - {{alumno.name}}
+        - {{alumno.lastname}}
+        - {{alumno.age}}
+        - {{alumno.address}}
+        - {{alumno.phone}}
+        - {{alumno.email}}
+    
+        </li>
+    </ul>
+    
+    <div class="card">
+    <div class="card-body">
+        <div class= "card-title">
+            <h3>{{selectedAlumno.id == 0 ? "Agregar Nuevo Alumno" : "Actualizar Alumno"}}</h3>
+        </div>
+       <div class="form-group">
+           <input type="text" [(ngModel)]="selectedAlumno.name" placeholder="name" class="form-control" required>
+       </div>
+       <div class="form-group">
+        <input type="text" [(ngModel)]="selectedAlumno.lastname" placeholder="lastname" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="number" [(ngModel)]="selectedAlumno.age" placeholder="age" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="text" [(ngModel)]="selectedAlumno.address" placeholder="address" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="tel" [(ngModel)]="selectedAlumno.phone" placeholder="phone number (0000-0000)" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="email" [(ngModel)]="selectedAlumno.email" placeholder="email (ejemplo@email.com)" class="form-control" required>
+    </div> 
+    <button (click)="addOrEdit()" class="btn btn-primary btn-space">Save</button>
+    <button *ngIf="selectedAlumno.id !== 0" (click)="delete()" class="btn btn-danger">Delete</button>
+    
+    </div>
+    
+    </div>
+            </div>
+    <div class="col-md-4">
+    <img width="300" alt="Angular logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Angular_one_color_inverse_logo.svg/1200px-Angular_one_color_inverse_logo.svg.png">
+    </div>
+    
+        </div>
+    
+    </div>
+    

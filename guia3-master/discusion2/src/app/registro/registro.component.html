@@ -1,0 +1,45 @@
+
+<div>
+    <div id="header">
+        <h1>Gasolinera Dos</h1>
+        <p id="s1">Indique el tipo de gasolina y cuantos galones consumirá</p>
+        <input type="text" value="Total: ${{monto}}" readonly /><br/>
+    
+            
+            
+    </div>
+    <div id="IL">
+        
+  
+    <label>Cantidad de galones:  </label>
+    <input type="number" step="0.05" min="0.05" max="150" [(ngModel)]="galones">
+    <br/><br/>
+    
+        <h2 id="bulgy-radios-label">Tipos</h2>
+      
+        <label>
+            <br/>
+          <input  type="radio" name="options"  value="{{tip1}}" checked [(ngModel)]="tipo"  />
+          <span class="radio"></span>
+          <span class="label">Regular</span>
+        </label>
+        <label>
+            <br/>
+          <input   type="radio" name="options" value="{{tip2}}" [(ngModel)]="tipo"/>
+          <span class="radio"></span>
+          <span class="label">Diesel</span>
+        </label>
+        <label>
+            <br/>
+          <input   type="radio" name="options" value="{{tip3}}" [(ngModel)]="tipo"/>
+          <span class="radio"></span>
+          <span class="label">Especial</span>
+        </label>
+        <br/><br/>
+           <button class="button" (click)="ingresar()">Ingresar</button>
+        
+        
+</div>
+
+</div>
+   

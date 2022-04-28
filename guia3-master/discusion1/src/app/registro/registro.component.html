@@ -1,0 +1,39 @@
+<div class="header">
+<h1>Datos de Empleado</h1>
+<p>Ingrese los datos de los empleados</p>
+</div>
+<div id="IL">
+    <br/><br/>
+<label>Nombre: </label>
+<input type="text" [(ngModel)]="nombre">
+<br/><br/>
+<label>Sueldo:  </label>
+<input type="text" [(ngModel)]="sueldo">
+</div>
+<br/><br/>
+
+<button class="button" (click)="ingresar()">Ingresar</button>
+
+<br/><br/>
+<table [hidden]="contador == 0">
+<thead>
+<tr>
+<th>Nombre</th>
+<th>SueldoXMes</th>
+<th>Desc. ISSS (7.3%)</th>
+<th>Desc. Renta (11%)</th>
+<th>Desc. AFP (5.1%)</th>
+<th>Monto final</th>
+</tr>
+</thead>
+<tbody>
+    <tr *ngFor="let iemp of registro">
+    <td id="nom">{{iemp.nombre}}</td>
+    <td id="nm">${{iemp.sueldo}}</td>
+    <td id="nm">${{iemp.desc1}}</td>
+    <td id="nm">${{iemp.desc2}}</td>
+    <td id="nm">${{iemp.desc3}}</td>
+    <td id="nm">${{iemp.monto}}</td>
+    </tr>
+    </tbody>
+    </table>
